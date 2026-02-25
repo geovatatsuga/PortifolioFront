@@ -4,12 +4,17 @@ import { Github, Linkedin, Mail, FileText, ExternalLink } from 'lucide-react';
 export const PROFILE = {
   name: "Jeová Anderson",
   role: {
-    en: "Data Scientist & AI Engineer",
-    pt: "Cientista de Dados & Engenheiro de IA"
+    en: "Data Scientist & Data Analyst",
+    pt: "Cientista de Dados & Analista de dados"
   },
   tagline: {
     en: "Transforming data into real solutions.",
     pt: "Transformando dados em soluções reais."
+  },
+  // Short related titles rendered under the main role in the hero section
+  titles: {
+    en: "AI Gen • LLMs • MLOps",
+    pt: "AI Gen • LLMs • MLOps"
   },
   about: {
     en: `Driven by curiosity, technology, and the desire to solve real problems, I am always in search of constant evolution. 
@@ -34,7 +39,7 @@ export const PROFILE = {
 export const PROJECTS = [
   {
     title: { en: "Synthetic Image Detection", pt: "Detecção de Imagens Sintéticas" },
-    category: "Computer Vision & AI",
+    category: "Computer Vision & AI Gen",
     subtitle: { en: "ViT + Edge-Based Processing", pt: "ViT + Processamento de Bordas" },
     date: "12/2025",
     tags: ["PyTorch", "HuggingFace", "Computer Vision", "ViT"],
@@ -43,6 +48,18 @@ export const PROJECTS = [
       pt: "Treinamento e ajuste fino de Vision Transformers (ViT ImgNet21k) para classificar imagens reais vs. sintéticas no dataset CIFAKE. Implementação de Processamento Baseado em Bordas (EBP) para análise estrutural."
     },
     url: "https://medium.com/@jeova.anderson/combinando-vision-transformers-e-an%C3%A1lise-de-bordas-ebp-para-detectar-imag%C3%A9ns-sinteticas-8d5142ae1623"
+  },
+  {
+    title: { en: "SwarmUI on Google Colab", pt: "SwarmUI no Google Colab" },
+    category: "Computer Vision & AI Gen",
+    subtitle: { en: "Free GPU Image Generation", pt: "Geração de Imagens com GPU Grátis" },
+    date: "02/2026",
+    tags: ["Google Colab", "Stable Diffusion", "SDXL", "ComfyUI", "SwarmUI", "cloudflared", "Civitai"],
+    description: {
+      en: "Step-by-step guide to running SwarmUI on free Google Colab GPU (T4) to generate unlimited AI images. Covers model download via Civitai, .NET setup, and Cloudflare tunnel (cloudflared) for remote access.",
+      pt: "Guia completo para rodar o SwarmUI na GPU grátis do Google Colab (T4) e gerar imagens de IA sem limites. Inclui download de modelos via Civitai, setup do .NET e túnel Cloudflare (cloudflared) para acesso remoto."
+    },
+    url: "https://medium.com/@jeova.anderson/swarmui-no-google-colab-o-guia-definitivo-para-gerar-imagens-de-ia-de-gra%C3%A7a-b3d5962dbf37"
   },
   {
     title: { en: "Customer Segmentation", pt: "Segmentação de Clientes" },
@@ -126,7 +143,14 @@ export const SKILLS = [
   },
   {
     category: { en: "Machine Learning", pt: "Machine Learning" },
-    items: ["Predictive Modeling", "Supervised Learning", "Unsupervised Learning", "Generative AI"]
+    items: [
+      "Predictive Modeling",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Computer Vision",
+      "Diffusion Models (Stable Diffusion / SDXL)",
+      "Generative AI (Image Generation)"
+    ]
   },
   {
     category: { en: "Data Engineering", pt: "Engenharia de Dados" },
@@ -134,7 +158,7 @@ export const SKILLS = [
   },
   {
     category: { en: "Tools", pt: "Ferramentas" },
-    items: ["Streamlit", "Git", "Power BI", "Excel", "Dash", "Looker Studio"]
+    items: ["Streamlit", "Git", "Power BI", "Excel", "Dash", "Looker Studio", "Google Colab", "cloudflared", "ComfyUI / SwarmUI"]
   }
 ];
 
@@ -165,7 +189,7 @@ export const UI_TEXT = {
     title: { en: "The Human", pt: "O Humano" },
     subtitle: { en: "Behind the Data", pt: "Por trás dos Dados" },
     focus: { en: "Primary Focus", pt: "Foco Principal" },
-    based: { en: "Based In", pt: "Baseado em" },
+    based: { en: "Location", pt: "Localização" },
     remote: { en: "Available Remote", pt: "Disponível Remoto" },
     exp: { en: "Experience", pt: "Experiência" },
     years: { en: "3+ Years", pt: "3+ Anos" }
