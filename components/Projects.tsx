@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
   };
 
   const getCategoryHint = (category: string) => {
-    if (category.includes('Big Data')) return 'Lakehouse -> BI';
+    if (category.includes('Big Data')) return 'AWS / Azure / Hadoop';
     if (category.includes('Business')) return 'Dashboards & decision';
     if (category.includes('Vision')) return 'Visual AI';
     if (category.includes('Sports')) return 'Analytics ranking';
@@ -148,7 +148,14 @@ const Projects: React.FC = () => {
         </div>
 
         {/* 1. Horizontal Category Modules (Side by Side) */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="hidden lg:block pointer-events-none absolute left-[10%] right-[10%] top-1/2 h-px bg-stone-200/70 overflow-hidden">
+                <motion.div
+                    className="h-px w-24 bg-purple-900/40"
+                    animate={{ x: ['-120%', '900%'] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+                />
+            </div>
             {categories.map((category, idx) => {
                 const isActive = activeCategory === category;
                 const count = PROJECTS.filter(p => p.category === category).length;
@@ -160,7 +167,7 @@ const Projects: React.FC = () => {
                         whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)" }}
                         whileTap={{ scale: 0.98 }}
                         className={`
-                            relative overflow-hidden p-8 text-left border transition-all duration-300 group
+                            relative z-10 overflow-hidden p-8 text-left border transition-all duration-300 group
                             ${isActive 
                                 ? 'bg-white border-purple-900/30 shadow-xl shadow-purple-900/5' 
                                 : 'bg-white/40 border-stone-200 hover:bg-white hover:border-stone-300'
