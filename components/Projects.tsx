@@ -101,10 +101,19 @@ const Projects: React.FC = () => {
 
   // Helper icons for Categories
   const getCategoryIcon = (category: string) => {
+    if (category.includes('Big Data') || category.includes('Cloud') || category.includes('Data') || category.includes('Engineering') || category.includes('MLOps')) return <Database className="w-8 h-8 mb-4" strokeWidth={1} />;
     if (category.includes('Vision')) return <ScanEye className="w-8 h-8 mb-4" strokeWidth={1} />;
     if (category.includes('Business')) return <BarChart3 className="w-8 h-8 mb-4" strokeWidth={1} />;
     if (category.includes('Sports')) return <Trophy className="w-8 h-8 mb-4" strokeWidth={1} />;
     return <Folder className="w-8 h-8 mb-4" strokeWidth={1} />;
+  };
+
+  const getCategoryHint = (category: string) => {
+    if (category.includes('Big Data')) return 'Lakehouse -> BI';
+    if (category.includes('Business')) return 'Dashboards & decision';
+    if (category.includes('Vision')) return 'Visual AI';
+    if (category.includes('Sports')) return 'Analytics ranking';
+    return 'Project archive';
   };
 
   return (
@@ -139,7 +148,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* 1. Horizontal Category Modules (Side by Side) */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {categories.map((category, idx) => {
                 const isActive = activeCategory === category;
                 const count = PROJECTS.filter(p => p.category === category).length;
@@ -175,6 +184,10 @@ const Projects: React.FC = () => {
                         <h4 className={`font-serif text-xl md:text-2xl mb-2 transition-colors duration-300 ${isActive ? 'text-obsidian' : 'text-stone-600'}`}>
                             {category}
                         </h4>
+
+                        <p className="font-mono text-[10px] uppercase tracking-widest text-stone-400 mb-4">
+                            {getCategoryHint(category)}
+                        </p>
                         
                         <div className="flex items-center gap-2">
                              <div className={`h-px flex-1 transition-colors duration-300 ${isActive ? 'bg-purple-900/20' : 'bg-stone-200'}`} />

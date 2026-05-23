@@ -49,7 +49,6 @@ const About: React.FC = () => {
                      className="stroke-purple-900 opacity-50"
                    />
                 </svg>
-                <p className="font-mono text-[10px] text-stone-400 mt-2 text-center">FIG 1.0: CURIOSITY WAVEFORM</p>
               </div>
            </div>
           
@@ -66,7 +65,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-mono text-[10px] uppercase tracking-widest text-stone-400 mb-2">{t(UI_TEXT.about.based)}</h4>
-                  <p className="font-serif text-lg text-stone-800">Paraíba, Brazil<br/><span className="text-sm italic text-stone-500 text-xs">{t(UI_TEXT.about.remote)}</span></p>
+                  <p className="font-serif text-lg text-stone-800">Paraíba, Brazil</p>
                 </div>
                 <div>
                    <h4 className="font-mono text-[10px] uppercase tracking-widest text-stone-400 mb-2">{t(UI_TEXT.about.exp)}</h4>

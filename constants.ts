@@ -38,14 +38,50 @@ export const PROFILE = {
 
 export const PROJECTS = [
   {
+    title: { en: "Fraud Detection Lakehouse", pt: "Detecção de Fraudes Lakehouse" },
+    category: "Big Data - Cloud",
+    subtitle: { en: "Azure Databricks + Delta Lake + MLflow", pt: "Azure Databricks + Delta Lake + MLflow" },
+    date: "05/2026",
+    tags: ["Azure Databricks", "Delta Lake", "PySpark", "MLflow", "Random Forest", "PaySim"],
+    description: {
+      en: "End-to-end fraud detection lakehouse processing 6.36M+ PaySim transactions with Bronze, Silver and Gold layers. Random Forest with engineered features reached 99.45% fraud recall and R$73.21M simulated financial gain.",
+      pt: "Pipeline lakehouse ponta a ponta para detecção de fraudes processando 6,36M+ transações PaySim em camadas Bronze, Silver e Gold. Random Forest com features alcançou 99,45% de recall e R$ 73,21M de ganho financeiro simulado."
+    },
+    url: "https://medium.com/@jeova.anderson/construindo-uma-pipeline-de-detec%C3%A7%C3%A3o-de-fraudes-com-azure-databricks-delta-lake-e-machine-learning-007af284a4d3"
+  },
+  {
+    title: { en: "Customer Segmentation", pt: "Segmentação de Clientes" },
+    category: "Business Intelligence",
+    subtitle: { en: "RFM + K-means Clustering", pt: "RFM + Clusterização K-means" },
+    date: "04/2025",
+    tags: ["Python", "K-Means", "RFM", "Plotly", "Dash"],
+    description: {
+      en: "Behavioral segmentation with RFM features, statistical transformations and K-Means. Classified customers into 10 business subgroups and 4 clusters, delivered through an interactive Dash and Plotly dashboard.",
+      pt: "Segmentação comportamental com features RFM, transformações estatísticas e K-Means. Classifiquei clientes em 10 subgrupos de negócio e 4 clusters, entregando a análise em dashboard interativo com Dash e Plotly."
+    },
+    url: "https://medium.com/@jeova.anderson/segmenta%C3%A7%C3%A3o-de-clientes-com-rfm-k-means-4e75c98f00d9"
+  },
+  {
+    title: { en: "Churn Prediction Dashboard", pt: "Previsão de Churn" },
+    category: "Business Intelligence",
+    subtitle: { en: "End-to-End Analytics", pt: "Analytics Ponta a Ponta" },
+    date: "04/2025",
+    tags: ["SQL", "Pandas", "Random Forest", "Dash"],
+    description: {
+      en: "Integrated churn solution with SQL Server extraction, Python preprocessing, Random Forest training on 1,926 samples and Dash/Plotly dashboards. Reached 81% accuracy and highlighted the main churn drivers.",
+      pt: "Solução integrada de churn com extração via SQL Server, pré-processamento em Python, Random Forest em 1.926 amostras e dashboards Dash/Plotly. Alcancei 81% de acurácia e destaquei os principais fatores de churn."
+    },
+    url: "https://medium.com/@jeova.anderson/3-dashboards-1-objetivo-prevendo-e-evitando-churn-com-random-forest-d729f9b289a4"
+  },
+  {
     title: { en: "Synthetic Image Detection", pt: "Detecção de Imagens Sintéticas" },
     category: "Computer Vision & AI Gen",
     subtitle: { en: "ViT + Edge-Based Processing", pt: "ViT + Processamento de Bordas" },
     date: "12/2025",
     tags: ["PyTorch", "HuggingFace", "Computer Vision", "ViT"],
     description: {
-      en: "Training and fine-tuning Vision Transformers (ViT ImgNet21k) to classify real vs. synthetic images on the CIFAKE dataset. Implemented Edge-Based Processing (EBP) for structural analysis based on high frequencies.",
-      pt: "Treinamento e ajuste fino de Vision Transformers (ViT ImgNet21k) para classificar imagens reais vs. sintéticas no dataset CIFAKE. Implementação de Processamento Baseado em Bordas (EBP) para análise estrutural."
+      en: "Hybrid approach combining ViT ImgNet21k fine-tuning with Edge-Based Processing for real vs. synthetic image classification. Reached 99.43% accuracy and 0.9943 F1, improving the fine-tuned ViT baseline.",
+      pt: "Abordagem híbrida combinando fine-tuning de ViT ImgNet21k com Edge-Based Processing para classificar imagens reais vs. sintéticas. Alcancei 99,43% de acurácia e F1 de 0,9943, melhorando o baseline do ViT ajustado."
     },
     url: "https://medium.com/@jeova.anderson/combinando-vision-transformers-e-an%C3%A1lise-de-bordas-ebp-para-detectar-imag%C3%A9ns-sinteticas-8d5142ae1623"
   },
@@ -62,38 +98,14 @@ export const PROJECTS = [
     url: "https://medium.com/@jeova.anderson/swarmui-no-google-colab-o-guia-definitivo-para-gerar-imagens-de-ia-de-gra%C3%A7a-b3d5962dbf37"
   },
   {
-    title: { en: "Customer Segmentation", pt: "Segmentação de Clientes" },
-    category: "Business Intelligence",
-    subtitle: { en: "RFM + K-means Clustering", pt: "RFM + Clusterização K-means" },
-    date: "04/2025",
-    tags: ["Python", "K-Means", "RFM", "Plotly", "Dash"],
-    description: {
-      en: "Real data cleaning from Wolt database. Feature engineering using RFM (Recency, Frequency, Monetary) analysis associated with K-means clustering to group users by behavioral patterns. Interactive dashboard deployment.",
-      pt: "Limpeza de dados reais da base Wolt. Engenharia de atributos usando análise RFM (Recência, Frequência, Monetário) associada ao K-means para agrupar usuários por padrões comportamentais. Deploy de dashboard interativo."
-    },
-    url: "https://medium.com/@jeova.anderson/segmenta%C3%A7%C3%A3o-de-clientes-com-rfm-k-means-4e75c98f00d9"
-  },
-  {
-    title: { en: "Churn Prediction Dashboard", pt: "Previsão de Churn" },
-    category: "Business Intelligence",
-    subtitle: { en: "End-to-End Analytics", pt: "Analytics Ponta a Ponta" },
-    date: "04/2025",
-    tags: ["SQL", "Pandas", "Random Forest", "Dash"],
-    description: {
-      en: "SQL data extraction and preprocessing. Pattern identification with Pandas and churn prediction using Random Forest. Visualized via an iterative dashboard built with Dash & Plotly.",
-      pt: "Extração e pré-processamento via SQL. Identificação de padrões com Pandas e previsão de churn usando Random Forest. Visualizado através de um dashboard iterativo construído com Dash & Plotly."
-    },
-    url: "https://medium.com/@jeova.anderson/3-dashboards-1-objetivo-prevendo-e-evitando-churn-com-random-forest-d729f9b289a4"
-  },
-  {
     title: { en: "Jiu-Jitsu ELO Rating System", pt: "Sistema ELO para Jiu-Jitsu" },
     category: "Sports Analytics",
     subtitle: { en: "Web Scraping & Statistics", pt: "Web Scraping & Estatística" },
     date: "06/2025",
     tags: ["Web Scraping", "Python", "K-Means", "Statistics"],
     description: {
-      en: "Analyzed over 56k fight records. Automated data collection via BJJ Heroes. Applied ELO rating algorithms and K-Means to cluster athletes into distinct technical profiles.",
-      pt: "Análise de mais de 56k registros de lutas. Coleta automatizada via BJJ Heroes. Aplicação de algoritmos ELO e K-Means para agrupar atletas em perfis técnicos distintos."
+      en: "Ranking system built from 56k+ Jiu-Jitsu fight records collected with Python, BeautifulSoup, ThreadPoolExecutor and Pandas. Identified peak ELO performance and 3 competitive profiles, including an elite group of 154 athletes.",
+      pt: "Sistema de ranking com 56k+ registros de lutas de Jiu-Jitsu coletados com Python, BeautifulSoup, ThreadPoolExecutor e Pandas. Identifiquei picos de ELO e 3 perfis competitivos, incluindo grupo de elite com 154 atletas."
     },
     url: "https://medium.com/@jeova.anderson/do-xadrez-ao-jiu-jitsu-usando-o-elo-rating-para-identificar-o-melhor-e-mapear-perfis-de-eca8950df773"
   }
@@ -105,10 +117,10 @@ export const EXPERIENCE = [
     role: { en: "Corporate Governance Intern", pt: "Estagiário de Governança Corporativa" },
     period: "07/2025 - 12/2025",
     description: [
-      { en: "Development and maintenance of the company's RAG system for internal documentation.", pt: "Desenvolvimento e manutenção do sistema RAG da empresa para documentação interna." },
-      { en: "Participated in creating the corporate chatbot 'Vivi'.", pt: "Participação na criação do chatbot corporativo 'Vivi'." },
-      { en: "Implemented email automation scripts for contract management.", pt: "Implementação de scripts de automação de e-mail para gestão de contratos." },
-      { en: "Built integrated dashboards for Corporate Governance metrics.", pt: "Criação de dashboards integrados para métricas de Governança Corporativa." }
+      { en: "Developed and maintained an internal-documentation RAG system, reducing manual information search time by ~40%.", pt: "Desenvolvi e mantive sistema de RAG para consulta de documentação interna, reduzindo em ~40% o tempo de busca manual por informações." },
+      { en: "Contributed to the corporate chatbot 'Vivi', automating 200+ monthly interactions for internal users.", pt: "Participei da criação do Chatbot Vivi, automatizando mais de 200 interações mensais de usuários internos." },
+      { en: "Automated contract-management emails with Python scripts, eliminating around 3 hours of manual work per week.", pt: "Automatizei envios de e-mails de gestão de contratos com scripts Python, eliminando cerca de 3h semanais de trabalho manual." },
+      { en: "Built an integrated dashboard consolidating KPIs from 3 areas, adopted by leadership for monthly monitoring.", pt: "Construí dashboard integrada consolidando KPIs de 3 áreas, adotada pela liderança como ferramenta de monitoramento mensal." }
     ]
   },
   {
@@ -116,18 +128,18 @@ export const EXPERIENCE = [
     role: { en: "Intern", pt: "Estagiário" },
     period: "01/2024 - 12/2024",
     description: [
-      { en: "Organization and digitization of historical documents.", pt: "Organização e digitalização de documentos históricos." },
-      { en: "Created pivot tables for data systematization.", pt: "Criação de tabelas dinâmicas para sistematização de dados." },
-      { en: "Improved workflow for collection counting and classification using Excel.", pt: "Melhoria no fluxo de trabalho para contagem e classificação de acervo usando Excel." }
+      { en: "Organized and digitized 1,200+ historical documents, enabling digital access to the archive.", pt: "Organizei e digitalizei mais de 1.200 documentos históricos, viabilizando acesso digital ao acervo." },
+      { en: "Created Excel pivot tables that reduced document-control systematization time by ~50%.", pt: "Criei tabelas dinâmicas no Excel que reduziram em ~50% o tempo de sistematização e controle documental." },
+      { en: "Restructured the collection counting and classification workflow, increasing team productivity by ~30%.", pt: "Reestruturei o fluxo de contagem e classificação de acervos, aumentando a produtividade do setor em aproximadamente 30%." }
     ]
   },
   {
     company: "Marcos Inácio Advogados",
-    role: { en: "Administrative Assistant", pt: "Assistente Administrativo" },
+    role: { en: "Administrative Assistant", pt: "Auxiliar Administrativo" },
     period: "04/2021 - 08/2021",
     description: [
-      { en: "Controlled material entry/exit and coordinated deliveries.", pt: "Controle de entrada/saída de materiais e coordenação de entregas." },
-      { en: "Implemented efficient organization systems to optimize office resource management.", pt: "Implementação de sistemas eficientes de organização para otimizar a gestão de recursos do escritório." }
+      { en: "Managed material inflow/outflow and receipt records with 100% register accuracy during the period.", pt: "Controlei entrada e saída de materiais e emissão de recibos, mantendo acurácia de 100% nos registros durante o período." },
+      { en: "Implemented a resource-control spreadsheet that reduced administrative management time by ~25%.", pt: "Implementei planilha de controle de recursos que reduziu em ~25% o tempo gasto na gestão administrativa do escritório." }
     ]
   }
 ];
@@ -135,11 +147,11 @@ export const EXPERIENCE = [
 export const SKILLS = [
   {
     category: { en: "Languages", pt: "Linguagens" },
-    items: ["Python (Pandas, NumPy, Scikit-learn, TensorFlow)", "SQL"]
+    items: ["Python (Pandas, NumPy, Scikit-learn)", "SQL"]
   },
   {
     category: { en: "Data Analysis", pt: "Análise de Dados" },
-    items: ["Big Data Handling", "Exploratory Analysis", "Visualization (Matplotlib, Seaborn, Plotly)"]
+    items: ["Big Data Handling", "Exploratory Analysis", "Business Metrics", "Visualization (Matplotlib, Seaborn, Plotly)"]
   },
   {
     category: { en: "Machine Learning", pt: "Machine Learning" },
@@ -147,6 +159,9 @@ export const SKILLS = [
       "Predictive Modeling",
       "Supervised Learning",
       "Unsupervised Learning",
+      "Fraud Detection",
+      "MLflow Experiment Tracking",
+      "Random Forest / GBT / Decision Tree",
       "Computer Vision",
       "Diffusion Models (Stable Diffusion / SDXL)",
       "Generative AI (Image Generation)"
@@ -154,20 +169,20 @@ export const SKILLS = [
   },
   {
     category: { en: "Data Engineering", pt: "Engenharia de Dados" },
-    items: ["Web Scraping", "APIs", "ETL Pipelines"]
+    items: ["Azure Databricks", "Delta Lake", "ADLS Gen2", "PySpark", "Lakehouse Architecture", "ETL Pipelines", "Web Scraping", "APIs"]
   },
   {
     category: { en: "Tools", pt: "Ferramentas" },
-    items: ["Streamlit", "Git", "Power BI", "Excel", "Dash", "Looker Studio", "Google Colab", "cloudflared", "ComfyUI / SwarmUI"]
+    items: ["Azure", "Databricks", "MLflow", "Git", "GitHub", "SQL Server", "Power BI", "Excel", "Dash", "Looker Studio", "Google Colab", "RAG / LLMs / Chatbots"]
   }
 ];
 
 export const EDUCATION = [
   {
-    institution: "Universidade Estadual da Paraíba (UEPB)",
+    institution: "Universidade Federal da Paraíba (UFPB)",
     degree: { en: "Technologist in Data Science", pt: "Tecnólogo em Ciência de Dados" },
     period: { en: "Conclusion 06/2026", pt: "Conclusão 06/2026" },
-    details: { en: "Full scholarship via selection process.", pt: "Bolsista integral via processo seletivo." }
+    details: { en: "Academic track focused on data, engineering, artificial intelligence and business impact.", pt: "Formação com foco em dados, engenharia, inteligência artificial e impacto de negócio." }
   }
 ];
 

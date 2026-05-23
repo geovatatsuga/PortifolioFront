@@ -6,6 +6,23 @@ import { useLanguage } from './LanguageContext';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
+  const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 8, scale: 0.98 },
+    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.45, ease: 'easeOut' } },
+    hover: { y: -8, scale: 1.02, transition: { duration: 0.25 } }
+  };
+
+  const listItemVariants = {
+    hidden: { opacity: 0, y: 6, clipPath: 'inset(0 0 100% 0)' },
+    show: { opacity: 1, y: 0, clipPath: 'inset(0 0 0 0)', transition: { duration: 0.35, ease: 'easeOut' } }
+  };
+
+  const statusVariants = {
+    idle: { scale: 1, opacity: 0.6 },
+    hover: { scale: 1.4, opacity: 1, transition: { duration: 0.6, repeat: Infinity, repeatType: 'mirror' } }
+  };
   
   // Helper to render background visuals based on category
   const getCategoryVisual = (category: string) => {
@@ -140,18 +157,26 @@ const Skills: React.FC = () => {
           {SKILLS.map((skillGroup, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              variants={prefersReducedMotion ? undefined : cardVariants}
+              initial={prefersReducedMotion ? undefined : 'hidden'}
+              whileInView={prefersReducedMotion ? undefined : 'show'}
+              whileHover={prefersReducedMotion ? undefined : 'hover'}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.5 }}
-              className="bg-white border border-stone-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-900/20 relative overflow-hidden group"
+              transition={{ delay: index * 0.05 }}
+              className="bg-white border border-stone-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-900/20 relative overflow-hidden group will-change-transform"
+              style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Category-Specific Animated Background */}
               {getCategoryVisual(t(skillGroup.category))}
 
               {/* Status Light */}
               <div className="absolute top-4 right-4 flex gap-1 z-20">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500/50 animate-pulse" />
+                <motion.div
+                  className="w-1.5 h-1.5 rounded-full bg-green-500/50"
+                  variants={prefersReducedMotion ? undefined : statusVariants}
+                  initial={prefersReducedMotion ? undefined : 'idle'}
+                  animate={prefersReducedMotion ? undefined : undefined}
+                />
                 <div className="w-1.5 h-1.5 rounded-full bg-stone-200" />
               </div>
 
@@ -159,19 +184,29 @@ const Skills: React.FC = () => {
                 {t(skillGroup.category)}
               </h4>
 
-              <ul className="space-y-3 relative z-10">
+              <motion.ul className="space-y-3 relative z-10" variants={prefersReducedMotion ? undefined : {}}
+                initial={prefersReducedMotion ? undefined : 'hidden'}
+                whileInView={prefersReducedMotion ? undefined : 'show'}
+                viewport={{ once: true }}
+              >
                 {skillGroup.items.map((item, i) => (
-                  <li key={i} className="font-sans text-sm text-stone-700 flex items-center justify-between border-b border-stone-100 pb-2 last:border-0 last:pb-0">
+                  <motion.li key={i} variants={prefersReducedMotion ? undefined : listItemVariants} className="font-sans text-sm text-stone-700 flex items-center justify-between border-b border-stone-100 pb-2 last:border-0 last:pb-0">
                     <span>{item}</span>
-                    <span className="text-[10px] text-stone-300 font-mono opacity-0 group-hover:opacity-100 transition-opacity">
+                    <motion.span className="text-[10px] text-stone-300 font-mono opacity-0 group-hover:opacity-100 transition-opacity">
                         0{i+1}
-                    </span>
-                  </li>
+                    </motion.span>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
               
               {/* Decorative Bar Code-ish thing */}
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-stone-200 via-purple-900/20 to-stone-200 opacity-0 group-hover:opacity-50 transition-opacity" />
+              <div className="absolute bottom-0 left-0 w-full h-0.5">
+                <motion.div className="h-0.5 bg-gradient-to-r from-stone-200 via-purple-900/40 to-stone-200"
+                  initial={{ width: '0%' }}
+                  whileHover={prefersReducedMotion ? {} : { width: '100%' }}
+                  transition={{ duration: 0.35 }}
+                />
+              </div>
             </motion.div>
           ))}
         </div>

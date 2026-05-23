@@ -388,6 +388,13 @@ const Hero: React.FC = () => {
               <p className="font-serif italic text-xl md:text-2xl text-stone-500 max-w-lg mt-4 leading-relaxed">
                 {t(PROFILE.tagline)}
               </p>
+              <div className="mt-3 flex flex-wrap gap-2 max-w-lg">
+                {(t(PROFILE.titles) || '').split(' • ').map((s, i) => (
+                  <span key={i} className="text-sm text-stone-500 bg-stone-100/10 px-2 py-1 rounded-md">
+                    {s}
+                  </span>
+                ))}
+              </div>
           </div>
 
         </motion.div>
