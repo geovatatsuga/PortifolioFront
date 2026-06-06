@@ -61,7 +61,7 @@ const About: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-stone-200 pt-8">
                 <div>
                   <h4 className="font-mono text-[10px] uppercase tracking-widest text-stone-400 mb-2">{t(UI_TEXT.about.focus)}</h4>
-                  <p className="font-serif text-lg text-stone-800">Machine Learning &<br/>Predictive Analytics</p>
+                  <p className="font-serif text-lg text-stone-800">FrontEnd Develop &<br/>AI Engineering</p>
                 </div>
                 <div>
                   <h4 className="font-mono text-[10px] uppercase tracking-widest text-stone-400 mb-2">{t(UI_TEXT.about.based)}</h4>

@@ -4,17 +4,17 @@ import { Github, Linkedin, Mail, FileText, ExternalLink } from 'lucide-react';
 export const PROFILE = {
   name: "Jeová Anderson",
   role: {
-    en: "Data Scientist & Data Analyst",
-    pt: "Cientista de Dados & Analista de dados"
+    en: "FrontEnd Developer",
+    pt: "FrontEnd Developer"
   },
   tagline: {
-    en: "Transforming data into real solutions.",
-    pt: "Transformando dados em soluções reais."
+    en: "Building interfaces with data, AI, and product thinking.",
+    pt: "Criando interfaces com dados, IA e visao de produto."
   },
   // Short related titles rendered under the main role in the hero section
   titles: {
-    en: "AI Gen • LLMs • MLOps",
-    pt: "AI Gen • LLMs • MLOps"
+    en: "FrontEnd Develop - AI Engineering - Data Science",
+    pt: "FrontEnd Develop - AI Engineering - Data Science"
   },
   about: {
     en: `Driven by curiosity, technology, and the desire to solve real problems, I am always in search of constant evolution. 
@@ -38,76 +38,57 @@ export const PROFILE = {
 
 export const PROJECTS = [
   {
-    title: { en: "Fraud Detection Lakehouse", pt: "Detecção de Fraudes Lakehouse" },
-    category: "Big Data - Cloud",
-    subtitle: { en: "Azure Databricks + Delta Lake + MLflow", pt: "Azure Databricks + Delta Lake + MLflow" },
-    date: "05/2026",
-    tags: ["Azure Databricks", "Delta Lake", "PySpark", "MLflow", "Random Forest", "PaySim"],
+    title: { en: "Fraud Risk BI", pt: "Fraud Risk BI" },
+    category: "FrontEnd Develop",
+    subtitle: { en: "Risk dashboard UI + data storytelling", pt: "Interface de risco + narrativa de dados" },
+    date: "2026",
+    image: "/Captura de tela 2026-06-06 aBI.png",
+    imageRatio: "1500 / 697",
+    tags: ["FrontEnd Develop", "Data Science", "JavaScript", "CSS", "BI"],
     description: {
-      en: "End-to-end fraud detection lakehouse processing 6.36M+ PaySim transactions with Bronze, Silver and Gold layers. Random Forest with engineered features reached 99.45% fraud recall and R$73.21M simulated financial gain.",
-      pt: "Pipeline lakehouse ponta a ponta para detecção de fraudes processando 6,36M+ transações PaySim em camadas Bronze, Silver e Gold. Random Forest com features alcançou 99,45% de recall e R$ 73,21M de ganho financeiro simulado."
+      en: "Interactive BI interface for fraud-risk analysis, focused on fast reading, visual hierarchy, KPI cards and decision-ready charts for operational monitoring.",
+      pt: "Interface de BI interativa para analise de risco de fraude, com foco em leitura rapida, hierarquia visual, cards de KPI e graficos prontos para decisao."
     },
-    url: "https://medium.com/@jeova.anderson/construindo-uma-pipeline-de-detec%C3%A7%C3%A3o-de-fraudes-com-azure-databricks-delta-lake-e-machine-learning-007af284a4d3"
+    url: "https://fraud-risk-bi.vercel.app/",
+    subProject: {
+      title: { en: "Lakehouse Fraud Detection", pt: "Detecção de Fraudes Lakehouse" },
+      subtitle: { en: "Azure Databricks + Delta Lake + MLflow", pt: "Azure Databricks + Delta Lake + MLflow" },
+      code: "SYS-0",
+      url: "https://medium.com/@jeova.anderson/construindo-uma-pipeline-de-detec%C3%A7%C3%A3o-de-fraudes-com-azure-databricks-delta-lake-e-machine-learning-007af284a4d3",
+      description: {
+        en: "End-to-end lakehouse pipeline for fraud detection, processing 6.36M+ PaySim transactions across Bronze, Silver, and Gold layers. Random Forest with features achieved 99.45% recall and R$ 73.21M in simulated financial savings.",
+        pt: "Pipeline lakehouse ponta a ponta para detecção de fraudes processando 6,36M+ transações PaySim em camadas Bronze, Silver e Gold. Random Forest com features alcançou 99,45% de recall e R$ 73,21M de ganho financeiro simulado."
+      },
+      tags: ["Azure Databricks", "Delta Lake", "PySpark", "MLflow", "Random Forest", "PaySim"]
+    }
   },
   {
-    title: { en: "Customer Segmentation", pt: "Segmentação de Clientes" },
-    category: "Business Intelligence",
-    subtitle: { en: "RFM + K-means Clustering", pt: "RFM + Clusterização K-means" },
-    date: "04/2025",
-    tags: ["Python", "K-Means", "RFM", "Plotly", "Dash"],
+    title: { en: "Big Bang Theory", pt: "Big Bang Theory" },
+    category: "FrontEnd Develop",
+    subtitle: { en: "Character-driven web experience", pt: "Experiencia web baseada em personagens" },
+    date: "2026",
+    image: "/project-big-bang.png",
+    imageRatio: "1500 / 697",
+    tags: ["FrontEnd Develop", "JavaScript", "CSS", "React", "UI"],
     description: {
-      en: "Behavioral segmentation with RFM features, statistical transformations and K-Means. Classified customers into 10 business subgroups and 4 clusters, delivered through an interactive Dash and Plotly dashboard.",
-      pt: "Segmentação comportamental com features RFM, transformações estatísticas e K-Means. Classifiquei clientes em 10 subgrupos de negócio e 4 clusters, entregando a análise em dashboard interativo com Dash e Plotly."
+      en: "A themed front-end project built around content organization, visual rhythm and responsive interaction, turning a pop-culture concept into a polished web interface.",
+      pt: "Projeto front-end tematico com organizacao de conteudo, ritmo visual e interacao responsiva, transformando cultura pop em uma interface web polida."
     },
-    url: "https://medium.com/@jeova.anderson/segmenta%C3%A7%C3%A3o-de-clientes-com-rfm-k-means-4e75c98f00d9"
+    url: "https://big-bang-theory-sigma.vercel.app/"
   },
   {
-    title: { en: "Churn Prediction Dashboard", pt: "Previsão de Churn" },
-    category: "Business Intelligence",
-    subtitle: { en: "End-to-End Analytics", pt: "Analytics Ponta a Ponta" },
-    date: "04/2025",
-    tags: ["SQL", "Pandas", "Random Forest", "Dash"],
+    title: { en: "CRM Interface", pt: "Interface CRM" },
+    category: "AI Engineering",
+    subtitle: { en: "Client workflow + intelligent UI", pt: "Fluxo de clientes + UI inteligente" },
+    date: "2026",
+    image: "/Captura de tela 2026-06-06 184907.png",
+    imageRatio: "1530 / 697",
+    tags: ["AI Engineering", "FrontEnd Develop", "JavaScript", "CSS", "CRM"],
     description: {
-      en: "Integrated churn solution with SQL Server extraction, Python preprocessing, Random Forest training on 1,926 samples and Dash/Plotly dashboards. Reached 81% accuracy and highlighted the main churn drivers.",
-      pt: "Solução integrada de churn com extração via SQL Server, pré-processamento em Python, Random Forest em 1.926 amostras e dashboards Dash/Plotly. Alcancei 81% de acurácia e destaquei os principais fatores de churn."
+      en: "CRM-style product interface for organizing customer data, actions and business context with a cleaner front-end flow and room for AI-assisted prioritization.",
+      pt: "Interface de produto no estilo CRM para organizar dados de clientes, acoes e contexto de negocio com fluxo front-end limpo e espaco para priorizacao assistida por IA."
     },
-    url: "https://medium.com/@jeova.anderson/3-dashboards-1-objetivo-prevendo-e-evitando-churn-com-random-forest-d729f9b289a4"
-  },
-  {
-    title: { en: "Synthetic Image Detection", pt: "Detecção de Imagens Sintéticas" },
-    category: "Computer Vision & AI Gen",
-    subtitle: { en: "ViT + Edge-Based Processing", pt: "ViT + Processamento de Bordas" },
-    date: "12/2025",
-    tags: ["PyTorch", "HuggingFace", "Computer Vision", "ViT"],
-    description: {
-      en: "Hybrid approach combining ViT ImgNet21k fine-tuning with Edge-Based Processing for real vs. synthetic image classification. Reached 99.43% accuracy and 0.9943 F1, improving the fine-tuned ViT baseline.",
-      pt: "Abordagem híbrida combinando fine-tuning de ViT ImgNet21k com Edge-Based Processing para classificar imagens reais vs. sintéticas. Alcancei 99,43% de acurácia e F1 de 0,9943, melhorando o baseline do ViT ajustado."
-    },
-    url: "https://medium.com/@jeova.anderson/combinando-vision-transformers-e-an%C3%A1lise-de-bordas-ebp-para-detectar-imag%C3%A9ns-sinteticas-8d5142ae1623"
-  },
-  {
-    title: { en: "SwarmUI on Google Colab", pt: "SwarmUI no Google Colab" },
-    category: "Computer Vision & AI Gen",
-    subtitle: { en: "Free GPU Image Generation", pt: "Geração de Imagens com GPU Grátis" },
-    date: "02/2026",
-    tags: ["Google Colab", "Stable Diffusion", "SDXL", "ComfyUI", "SwarmUI", "cloudflared", "Civitai"],
-    description: {
-      en: "Step-by-step guide to running SwarmUI on free Google Colab GPU (T4) to generate unlimited AI images. Covers model download via Civitai, .NET setup, and Cloudflare tunnel (cloudflared) for remote access.",
-      pt: "Guia completo para rodar o SwarmUI na GPU grátis do Google Colab (T4) e gerar imagens de IA sem limites. Inclui download de modelos via Civitai, setup do .NET e túnel Cloudflare (cloudflared) para acesso remoto."
-    },
-    url: "https://medium.com/@jeova.anderson/swarmui-no-google-colab-o-guia-definitivo-para-gerar-imagens-de-ia-de-gra%C3%A7a-b3d5962dbf37"
-  },
-  {
-    title: { en: "Jiu-Jitsu ELO Rating System", pt: "Sistema ELO para Jiu-Jitsu" },
-    category: "Sports Analytics",
-    subtitle: { en: "Web Scraping & Statistics", pt: "Web Scraping & Estatística" },
-    date: "06/2025",
-    tags: ["Web Scraping", "Python", "K-Means", "Statistics"],
-    description: {
-      en: "Ranking system built from 56k+ Jiu-Jitsu fight records collected with Python, BeautifulSoup, ThreadPoolExecutor and Pandas. Identified peak ELO performance and 3 competitive profiles, including an elite group of 154 athletes.",
-      pt: "Sistema de ranking com 56k+ registros de lutas de Jiu-Jitsu coletados com Python, BeautifulSoup, ThreadPoolExecutor e Pandas. Identifiquei picos de ELO e 3 perfis competitivos, incluindo grupo de elite com 154 atletas."
-    },
-    url: "https://medium.com/@jeova.anderson/do-xadrez-ao-jiu-jitsu-usando-o-elo-rating-para-identificar-o-melhor-e-mapear-perfis-de-eca8950df773"
+    url: "https://cereus-snowy.vercel.app/"
   }
 ];
 
@@ -146,40 +127,30 @@ export const EXPERIENCE = [
 
 export const SKILLS = [
   {
-    category: { en: "Languages", pt: "Linguagens" },
-    items: ["Python (Pandas, NumPy, Scikit-learn)", "SQL"]
+    category: { en: "FrontEnd Develop", pt: "FrontEnd Develop" },
+    items: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Responsive UI"]
   },
   {
-    category: { en: "Data Analysis", pt: "Análise de Dados" },
-    items: ["Big Data Handling", "Exploratory Analysis", "Business Metrics", "Visualization (Matplotlib, Seaborn, Plotly)"]
+    category: { en: "Interface Design", pt: "Design de Interface" },
+    items: ["Component Layout", "Visual Hierarchy", "Dashboards", "Accessibility Basics", "UX Writing"]
   },
   {
-    category: { en: "Machine Learning", pt: "Machine Learning" },
-    items: [
-      "Predictive Modeling",
-      "Supervised Learning",
-      "Unsupervised Learning",
-      "Fraud Detection",
-      "MLflow Experiment Tracking",
-      "Random Forest / GBT / Decision Tree",
-      "Computer Vision",
-      "Diffusion Models (Stable Diffusion / SDXL)",
-      "Generative AI (Image Generation)"
-    ]
+    category: { en: "AI Engineering", pt: "AI Engineering" },
+    items: ["LLM Interfaces", "RAG Concepts", "Prompt Engineering", "Chatbots", "AI-assisted Workflows"]
   },
   {
-    category: { en: "Data Engineering", pt: "Engenharia de Dados" },
-    items: ["Azure Databricks", "Delta Lake", "ADLS Gen2", "PySpark", "Lakehouse Architecture", "ETL Pipelines", "Web Scraping", "APIs"]
+    category: { en: "Data Science", pt: "Data Science" },
+    items: ["Python", "SQL", "Pandas", "Business Metrics", "Data Visualization"]
   },
   {
     category: { en: "Tools", pt: "Ferramentas" },
-    items: ["Azure", "Databricks", "MLflow", "Git", "GitHub", "SQL Server", "Power BI", "Excel", "Dash", "Looker Studio", "Google Colab", "RAG / LLMs / Chatbots"]
+    items: ["Git", "GitHub", "Vercel", "Power BI", "Figma", "Google Colab"]
   }
 ];
 
 export const EDUCATION = [
   {
-    institution: "Universidade Federal da Paraíba (UFPB)",
+    institution: "Universidade Estadual da Paraíba (UEPB)",
     degree: { en: "Technologist in Data Science", pt: "Tecnólogo em Ciência de Dados" },
     period: { en: "Conclusion 06/2026", pt: "Conclusão 06/2026" },
     details: { en: "Academic track focused on data, engineering, artificial intelligence and business impact.", pt: "Formação com foco em dados, engenharia, inteligência artificial e impacto de negócio." }
@@ -210,9 +181,9 @@ export const UI_TEXT = {
     years: { en: "3+ Years", pt: "3+ Anos" }
   },
   projects: {
-    section: { en: "02. / ARCHIVE", pt: "02. / ARQUIVO" },
-    title: { en: "Research & Protocols", pt: "Pesquisa & Protocolos" },
-    interact: { en: "Interact to Analyze Data", pt: "Interaja para Analisar" },
+    section: { en: "02. / PROJECTS", pt: "02. / PROJETOS" },
+    title: { en: "FrontEnd Interfaces", pt: "Interfaces FrontEnd" },
+    interact: { en: "Interact to Explore", pt: "Interaja para Explorar" },
     files: { en: "FILES", pt: "ARQUIVOS" }
   },
   skills: {
@@ -255,3 +226,34 @@ export const UI_TEXT = {
     rights: { en: "All rights reserved.", pt: "Todos os direitos reservados." }
   }
 };
+
+export const GENAI_PROJECTS = [
+  {
+    title: { en: "MythosEngine", pt: "MythosEngine" },
+    subtitle: { en: "Multi-Agent Narrative Architecture", pt: "Arquitetura Narrativa Multiagente" },
+    code: "GEN-0",
+    image: "/project-mythos.png",
+    imageRatio: "1024 / 470",
+    category: "AI Engine / Agentic",
+    description: {
+      en: "A multi-agent architecture for generating long and coherent narratives with a structured memory system, facilitating the creation of complex scripts and books.",
+      pt: "Uma arquitetura multiagente para gerar narrativas longas e coerentes com sistema de memória estruturado, facilitando a criação de roteiros e livros complexos."
+    },
+    tags: ["Generative AI", "LLMs", "Multi-Agent Systems", "Python", "LangChain"],
+    url: "https://medium.com/@jeova.anderson/mythosengine-uma-simples-arquitetura-multiagente-para-gerar-narrativas-longas-com-mem%C3%B3ria-em-cdd3b567c611"
+  },
+  {
+    title: { en: "Novel-to-Webtoon Pipeline", pt: "Pipeline Novel para Webtoon" },
+    subtitle: { en: "Multimodal Generative Pipeline", pt: "Pipeline Generativa Multimodal" },
+    code: "GEN-1",
+    image: "/project-webtoon.png",
+    imageRatio: "1024 / 470",
+    category: "Generative AI / Pipeline",
+    description: {
+      en: "An end-to-end pipeline converting webnovel chapters into digital comics (webtoons) by integrating LLMs for scripting and image generative AIs for visual consistency.",
+      pt: "Pipeline completa que converte capítulos de webnovels em quadrinhos digitais (webtoons) integrando LLMs para roteirização e IAs generativas de imagem para consistência visual."
+    },
+    tags: ["Generative AI", "LLMs", "Stable Diffusion", "Prompt Engineering", "Multimodal"],
+    url: "https://medium.com/@jeova.anderson/transformando-um-cap%C3%ADtulo-de-novel-em-uma-pipeline-completa-de-webtoon-com-ia-350d2ec38f47"
+  }
+];
