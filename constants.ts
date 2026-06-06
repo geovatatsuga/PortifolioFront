@@ -42,7 +42,7 @@ export const PROJECTS = [
     category: "FrontEnd Develop",
     subtitle: { en: "Risk dashboard UI + data storytelling", pt: "Interface de risco + narrativa de dados" },
     date: "2026",
-    image: "/Captura de tela 2026-06-06 aBI.png",
+    image: `${import.meta.env.BASE_URL}Captura de tela 2026-06-06 aBI.png`,
     imageRatio: "1500 / 697",
     tags: ["FrontEnd Develop", "Data Science", "JavaScript", "CSS", "BI"],
     description: {
@@ -67,7 +67,7 @@ export const PROJECTS = [
     category: "FrontEnd Develop",
     subtitle: { en: "Character-driven web experience", pt: "Experiencia web baseada em personagens" },
     date: "2026",
-    image: "/project-big-bang.png",
+    image: `${import.meta.env.BASE_URL}project-big-bang.png`,
     imageRatio: "1500 / 697",
     tags: ["FrontEnd Develop", "JavaScript", "CSS", "React", "UI"],
     description: {
@@ -81,7 +81,7 @@ export const PROJECTS = [
     category: "AI Engineering",
     subtitle: { en: "Client workflow + intelligent UI", pt: "Fluxo de clientes + UI inteligente" },
     date: "2026",
-    image: "/Captura de tela 2026-06-06 184907.png",
+    image: `${import.meta.env.BASE_URL}Captura de tela 2026-06-06 184907.png`,
     imageRatio: "1530 / 697",
     tags: ["AI Engineering", "FrontEnd Develop", "JavaScript", "CSS", "CRM"],
     description: {
@@ -232,7 +232,7 @@ export const GENAI_PROJECTS = [
     title: { en: "MythosEngine", pt: "MythosEngine" },
     subtitle: { en: "Multi-Agent Narrative Architecture", pt: "Arquitetura Narrativa Multiagente" },
     code: "GEN-0",
-    image: "/project-mythos.png",
+    image: `${import.meta.env.BASE_URL}project-mythos.png`,
     imageRatio: "1024 / 470",
     category: "AI Engine / Agentic",
     description: {
@@ -246,7 +246,7 @@ export const GENAI_PROJECTS = [
     title: { en: "Novel-to-Webtoon Pipeline", pt: "Pipeline Novel para Webtoon" },
     subtitle: { en: "Multimodal Generative Pipeline", pt: "Pipeline Generativa Multimodal" },
     code: "GEN-1",
-    image: "/project-webtoon.png",
+    image: `${import.meta.env.BASE_URL}project-webtoon.png`,
     imageRatio: "1024 / 470",
     category: "Generative AI / Pipeline",
     description: {

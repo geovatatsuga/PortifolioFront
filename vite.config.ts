@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
 
-  // Default to root hosting (e.g., Render). GitHub Pages overrides via VITE_BASE in the workflow.
-  const base = env.VITE_BASE || '/';
+  // GitHub Pages hosts this repository under /PortifolioFront/.
+  const base = env.VITE_BASE || '/PortifolioFront/';
 
     return {
       base,
