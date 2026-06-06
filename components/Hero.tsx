@@ -320,7 +320,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="font-mono text-xs text-stone-500 uppercase tracking-widest flex items-center gap-2"
           >
-            Portfolio 2025 <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"/> {t(UI_TEXT.hero.active)}
+            Portfolio 2026 <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"/> {t(UI_TEXT.hero.active)}
           </motion.span>
         </motion.div>
 
