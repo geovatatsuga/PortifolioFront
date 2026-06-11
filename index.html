@@ -15,6 +15,8 @@
     <meta name="author" content="Jeová Anderson" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://geovatatsuga.github.io/PortifolioFront/" />
+    <link rel="alternate" type="application/json" title="Portfolio structured data" href="https://geovatatsuga.github.io/PortifolioFront/portfolio.json" />
+    <link rel="alternate" type="text/plain" title="LLM-readable portfolio summary" href="https://geovatatsuga.github.io/PortifolioFront/llms.txt" />
     <meta property="og:title" content="Jeová Anderson - Data Science, BI & AI Portfolio" />
     <meta
       property="og:description"
@@ -93,6 +95,63 @@
             "name": "Cereus CRM",
             "description": "Interface CRM para organizar dados de clientes, ações, contexto de negócio e estrutura visual pronta para analytics.",
             "url": "https://cereus-snowy.vercel.app/"
+          }
+        ]
+      }
+    </script>
+    <script type="application/json" id="portfolio-data">
+      {
+        "name": "Jeová Anderson",
+        "role": "Analista de Dados e Especialista em Business Intelligence",
+        "summary": "Profissional de dados com projetos em BI, Ciência de Dados, Machine Learning, Engenharia de Dados, Azure Databricks, Delta Lake, PySpark, MLflow, Power BI, Dash, Plotly, IA Generativa e LLMs.",
+        "links": {
+          "portfolio": "https://geovatatsuga.github.io/PortifolioFront/",
+          "github": "https://github.com/geovatatsuga",
+          "linkedin": "https://www.linkedin.com/in/jeova-anderson/",
+          "medium": "https://medium.com/@jeova.anderson",
+          "structuredData": "https://geovatatsuga.github.io/PortifolioFront/portfolio.json",
+          "llms": "https://geovatatsuga.github.io/PortifolioFront/llms.txt"
+        },
+        "projects": [
+          {
+            "name": "Fraud Risk BI",
+            "description": "Interface de BI interativa para análise de risco de fraude, KPI cards e gráficos prontos para decisão.",
+            "tags": ["Business Intelligence", "Data Science", "Python", "SQL", "Dashboard", "Fraud Detection"]
+          },
+          {
+            "name": "Detecção de Fraudes Lakehouse",
+            "description": "Pipeline lakehouse com Azure Databricks, Delta Lake, PySpark, MLflow e Random Forest sobre 6,36M+ transações PaySim, com 99,45% de recall.",
+            "tags": ["Azure Databricks", "Delta Lake", "PySpark", "MLflow", "Random Forest", "Fraud Detection"]
+          },
+          {
+            "name": "Segmentação de Clientes",
+            "description": "Segmentação comportamental com RFM, K-Means, Dash e Plotly, classificando clientes em 10 subgrupos de negócio e 4 clusters.",
+            "tags": ["Python", "K-Means", "RFM", "Plotly", "Dash", "Customer Analytics"]
+          },
+          {
+            "name": "Previsão de Churn",
+            "description": "Solução de churn com SQL Server, Python, Random Forest, Dash e Plotly, alcançando 81% de acurácia.",
+            "tags": ["SQL", "Pandas", "Random Forest", "Dash", "Plotly", "Churn Analytics"]
+          },
+          {
+            "name": "Cereus CRM",
+            "description": "Interface CRM para organizar dados de clientes, ações e contexto de negócio com estrutura visual pronta para analytics.",
+            "tags": ["CRM", "Data Analytics", "Business Intelligence", "React", "Dashboard"]
+          },
+          {
+            "name": "MythosEngine",
+            "description": "Arquitetura multiagente para narrativas longas com memória estruturada.",
+            "tags": ["Generative AI", "LLMs", "Multi-Agent Systems", "Python", "LangChain"]
+          },
+          {
+            "name": "Big Bang Theory",
+            "description": "Interface front-end baseada em personagens que pode evoluir para experiências de IA conversacional/personagens.",
+            "tags": ["FrontEnd Develop", "React", "JavaScript", "Responsive UI", "Character UI", "AI Interface"]
+          },
+          {
+            "name": "Novel-to-Webtoon Pipeline",
+            "description": "Pipeline multimodal com LLMs e geração de imagem para converter capítulos de webnovel em quadrinhos digitais.",
+            "tags": ["Generative AI", "LLMs", "Stable Diffusion", "Prompt Engineering", "Multimodal"]
           }
         ]
       }

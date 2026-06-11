@@ -3,6 +3,7 @@
 Jeová Anderson is a Data Analyst and Business Intelligence specialist focused on Data Science, Machine Learning, Data Engineering, Azure Databricks, Delta Lake, PySpark, MLflow, Power BI, Dash, Plotly, Generative AI and LLM systems.
 
 Website: https://geovatatsuga.github.io/PortifolioFront/
+Structured JSON: https://geovatatsuga.github.io/PortifolioFront/portfolio.json
 GitHub: https://github.com/geovatatsuga
 LinkedIn: https://www.linkedin.com/in/jeova-anderson/
 Medium: https://medium.com/@jeova.anderson
