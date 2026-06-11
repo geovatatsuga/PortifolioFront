@@ -134,7 +134,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="min-h-[400px]">
-            <motion.div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+            <motion.div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 items-start">
                 {PROJECTS.map((project, index) => {
                     const subProject = (project as any).subProject;
                     return (
@@ -146,7 +146,7 @@ const Projects: React.FC = () => {
                                     rel="noopener noreferrer"
                                     className="block h-full"
                                 >
-                                    <div className="bg-white border border-stone-200 h-full flex flex-col justify-between relative transition-all duration-500 hover:border-purple-900/30 hover:shadow-2xl shadow-stone-200/50 rounded-lg transform-style-3d cursor-pointer overflow-hidden">
+                                    <div className="bg-white border border-stone-200 h-[520px] flex flex-col justify-between relative transition-all duration-500 hover:border-purple-900/30 hover:shadow-2xl shadow-stone-200/50 rounded-lg transform-style-3d cursor-pointer overflow-hidden">
                                         
                                         {/* Tech Corner Brackets */}
                                         <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-stone-400 group-hover:border-purple-900/50 transition-colors" />
@@ -156,11 +156,8 @@ const Projects: React.FC = () => {
 
                                         {'image' in project && project.image && (
                                             <div
-                                                className="relative z-10 overflow-hidden border-b border-stone-200 bg-stone-100"
-                                                style={{
-                                                    transform: "translateZ(12px)",
-                                                    aspectRatio: 'imageRatio' in project ? project.imageRatio : "16 / 9"
-                                                }}
+                                                className="relative z-10 h-36 overflow-hidden border-b border-stone-200 bg-stone-100"
+                                                style={{ transform: "translateZ(12px)" }}
                                             >
                                                 <img 
                                                     src={project.image} 
@@ -175,8 +172,8 @@ const Projects: React.FC = () => {
                                         )}
 
                                         {/* Card Content (Lifted slightly in Z-space) */}
-                                        <div className="relative z-10 p-8 flex-1" style={{ transform: "translateZ(20px)" }}>
-                                            <div className="flex justify-between items-start mb-6">
+                                        <div className="relative z-10 p-5 flex-1" style={{ transform: "translateZ(20px)" }}>
+                                            <div className="flex justify-between items-start mb-4">
                                                 <div className="flex items-center gap-3">
                                                     <span className="font-mono text-[10px] font-bold text-stone-400 border border-stone-200 px-1 rounded">
                                                         SYS-{index}
@@ -186,23 +183,23 @@ const Projects: React.FC = () => {
                                                 <ArrowUpRight className="w-5 h-5 text-stone-300 group-hover:text-obsidian group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                                             </div>
                                             
-                                            <h4 className="font-serif text-2xl text-obsidian mb-2 group-hover:text-purple-900 transition-colors">
+                                            <h4 className="font-serif text-xl leading-tight text-obsidian mb-2 group-hover:text-purple-900 transition-colors">
                                                 {t(project.title)}
                                             </h4>
                                             
-                                            <p className="font-sans text-[10px] font-bold tracking-widest text-stone-500 uppercase mb-4">
+                                            <p className="font-sans text-[9px] font-bold tracking-widest text-stone-500 uppercase mb-3 min-h-[28px]">
                                                 {t(project.subtitle)}
                                             </p>
                                             
-                                            <p className="font-sans text-sm text-stone-600 leading-relaxed">
+                                            <p className="font-sans text-xs text-stone-600 leading-relaxed line-clamp-5">
                                                 {t(project.description)}
                                             </p>
                                         </div>
 
                                         {/* Tags (Lifted less in Z-space) */}
-                                        <div className="relative z-10 p-8 pt-6 mt-0 border-t border-stone-100/50 flex flex-wrap gap-2" style={{ transform: "translateZ(10px)" }}>
+                                        <div className="relative z-10 p-5 pt-4 mt-0 border-t border-stone-100/50 flex flex-wrap gap-1.5 min-h-[86px]" style={{ transform: "translateZ(10px)" }}>
                                             {project.tags.map((tag, i) => (
-                                                <span key={i} className="text-[10px] font-mono text-stone-400 bg-stone-50 px-2 py-1 rounded">
+                                                <span key={i} className="text-[9px] font-mono text-stone-400 bg-stone-50 px-1.5 py-0.5 rounded">
                                                     {tag}
                                                 </span>
                                             ))}
@@ -215,12 +212,12 @@ const Projects: React.FC = () => {
                                 <>
                                     {/* Visual Connector */}
                                     <div className="flex flex-col items-center -my-3 relative z-20">
-                                        <div className="w-[1.5px] h-6 bg-gradient-to-b from-purple-900/30 to-purple-900/60 border-dashed border-l border-purple-900/40" />
+                                        <div className="w-[1.5px] h-4 bg-gradient-to-b from-purple-900/30 to-purple-900/60 border-dashed border-l border-purple-900/40" />
                                         <div className="bg-white text-purple-950 font-mono text-[9px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-purple-900/20 shadow-sm flex items-center gap-1.5">
                                             <span className="w-1.5 h-1.5 rounded-full bg-purple-900 animate-pulse" />
                                             {t({ en: "DATA SOURCE", pt: "FONTE DE DADOS" })}
                                         </div>
-                                        <div className="w-[1.5px] h-6 bg-gradient-to-b from-purple-900/60 to-purple-900/30 border-dashed border-l border-purple-900/40" />
+                                        <div className="w-[1.5px] h-4 bg-gradient-to-b from-purple-900/60 to-purple-900/30 border-dashed border-l border-purple-900/40" />
                                     </div>
                                     
                                     {/* Simpler connected card */}
@@ -229,7 +226,7 @@ const Projects: React.FC = () => {
                                             href={subProject.url} 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="block bg-white/75 backdrop-blur-sm border border-stone-200/80 rounded-lg p-6 relative transition-all duration-300 hover:border-purple-900/30 hover:bg-white hover:shadow-xl group cursor-pointer"
+                                            className="block bg-white/75 backdrop-blur-sm border border-stone-200/80 rounded-lg p-4 relative transition-all duration-300 hover:border-purple-900/30 hover:bg-white hover:shadow-xl group cursor-pointer"
                                         >
                                             {/* Tech Corner Brackets */}
                                             <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-stone-300 group-hover:border-purple-900/30 transition-colors" />
@@ -237,7 +234,7 @@ const Projects: React.FC = () => {
                                             <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-stone-300 group-hover:border-purple-900/30 transition-colors" />
                                             <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-stone-300 group-hover:border-purple-900/30 transition-colors" />
                                             
-                                            <div className="flex justify-between items-start mb-4">
+                                            <div className="flex justify-between items-start mb-3">
                                                 <div className="flex items-center gap-3">
                                                     <span className="font-mono text-[10px] font-bold text-stone-400 border border-stone-200 px-1 rounded">
                                                         {subProject.code}
@@ -247,21 +244,21 @@ const Projects: React.FC = () => {
                                                 <ArrowUpRight className="w-4 h-4 text-stone-300 group-hover:text-obsidian group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                                             </div>
                                             
-                                            <h4 className="font-serif text-lg text-obsidian mb-1 group-hover:text-purple-900 transition-colors">
+                                            <h4 className="font-serif text-base leading-tight text-obsidian mb-1 group-hover:text-purple-900 transition-colors">
                                                 {t(subProject.title)}
                                             </h4>
                                             
-                                            <p className="font-sans text-[9px] font-bold tracking-widest text-stone-500 uppercase mb-3">
+                                            <p className="font-sans text-[8px] font-bold tracking-widest text-stone-500 uppercase mb-2">
                                                 {t(subProject.subtitle)}
                                             </p>
                                             
-                                            <p className="font-sans text-xs text-stone-600 leading-relaxed mb-4">
+                                            <p className="font-sans text-[11px] text-stone-600 leading-relaxed mb-3 line-clamp-4">
                                                 {t(subProject.description)}
                                             </p>
                                             
                                             <div className="flex flex-wrap gap-1.5">
                                                 {subProject.tags.map((tag: string, i: number) => (
-                                                    <span key={i} className="text-[9px] font-mono text-stone-400 bg-stone-50 px-1.5 py-0.5 rounded border border-stone-100">
+                                                    <span key={i} className="text-[8px] font-mono text-stone-400 bg-stone-50 px-1.5 py-0.5 rounded border border-stone-100">
                                                         {tag}
                                                     </span>
                                                 ))}
@@ -322,7 +319,7 @@ const Projects: React.FC = () => {
              </h4>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 items-start">
              {GENAI_PROJECTS.map((project, index) => {
                  const hasImage = 'image' in project && project.image;
                  return (
@@ -333,7 +330,7 @@ const Projects: React.FC = () => {
                              rel="noopener noreferrer"
                              className="block h-full"
                          >
-                             <div className="bg-white border border-stone-200 h-full flex flex-col justify-between relative transition-all duration-500 hover:border-purple-900/30 hover:shadow-2xl shadow-stone-200/50 rounded-lg transform-style-3d cursor-pointer overflow-hidden">
+                             <div className="bg-white border border-stone-200 h-[520px] flex flex-col justify-between relative transition-all duration-500 hover:border-purple-900/30 hover:shadow-2xl shadow-stone-200/50 rounded-lg transform-style-3d cursor-pointer overflow-hidden">
                                  
                                  {/* Tech Corner Brackets */}
                                  <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-stone-400 group-hover:border-purple-900/50 transition-colors" />
@@ -343,10 +340,9 @@ const Projects: React.FC = () => {
                                  
                                  {hasImage && (
                                      <div 
-                                         className="relative overflow-hidden border-b border-stone-200 bg-stone-100 w-full"
+                                         className="relative h-36 overflow-hidden border-b border-stone-200 bg-stone-100 w-full"
                                          style={{ 
-                                             transform: "translateZ(12px)",
-                                             aspectRatio: (project as any).imageRatio || "16 / 9" 
+                                             transform: "translateZ(12px)"
                                          }}
                                      >
                                          <img 
@@ -361,8 +357,8 @@ const Projects: React.FC = () => {
                                      </div>
                                  )}
 
-                                 <div className="relative z-10 p-8 flex-1" style={{ transform: "translateZ(20px)" }}>
-                                     <div className="flex justify-between items-start mb-6">
+                                 <div className="relative z-10 p-5 flex-1" style={{ transform: "translateZ(20px)" }}>
+                                     <div className="flex justify-between items-start mb-4">
                                          <div className="flex items-center gap-3">
                                              <span className="font-mono text-[10px] font-bold text-stone-400 border border-stone-200 px-1 rounded">
                                                  {project.code}
@@ -372,22 +368,22 @@ const Projects: React.FC = () => {
                                          <ArrowUpRight className="w-5 h-5 text-stone-300 group-hover:text-obsidian group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                                      </div>
                                      
-                                     <h4 className="font-serif text-2xl text-obsidian mb-2 group-hover:text-purple-900 transition-colors">
+                                     <h4 className="font-serif text-xl leading-tight text-obsidian mb-2 group-hover:text-purple-900 transition-colors">
                                          {t(project.title)}
                                      </h4>
                                      
-                                     <p className="font-sans text-[10px] font-bold tracking-widest text-stone-500 uppercase mb-4">
+                                     <p className="font-sans text-[9px] font-bold tracking-widest text-stone-500 uppercase mb-3 min-h-[28px]">
                                          {t(project.subtitle)}
                                      </p>
                                      
-                                     <p className="font-sans text-sm text-stone-600 leading-relaxed">
+                                     <p className="font-sans text-xs text-stone-600 leading-relaxed line-clamp-5">
                                          {t(project.description)}
                                      </p>
                                  </div>
                                  
-                                 <div className="relative z-10 p-8 pt-6 mt-0 border-t border-stone-100/50 flex flex-wrap gap-2" style={{ transform: "translateZ(10px)" }}>
+                                 <div className="relative z-10 p-5 pt-4 mt-0 border-t border-stone-100/50 flex flex-wrap gap-1.5 min-h-[86px]" style={{ transform: "translateZ(10px)" }}>
                                      {project.tags.map((tag: string, i: number) => (
-                                         <span key={i} className="text-[10px] font-mono text-stone-400 bg-stone-50 px-2 py-1 rounded">
+                                         <span key={i} className="text-[9px] font-mono text-stone-400 bg-stone-50 px-1.5 py-0.5 rounded">
                                              {tag}
                                          </span>
                                      ))}
